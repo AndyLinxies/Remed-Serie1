@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route welcome that returns a view 
+Route::get('/{nimp}', function ($nimp) {
+
+    return view('welcome',compact('nimp'));
+});
+
+
 Route::get('/andy', function () {
     $nom= '<h2>Je me nomme andy</h2>';
     return $nom;
